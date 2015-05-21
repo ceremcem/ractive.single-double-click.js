@@ -9,6 +9,9 @@
 ;(function () {
 	'use strict';
 
+	if (Ractive.events.singleclick && Ractive.events.doubleclick)
+		return;
+
 	Ractive.events.singleclick = eventHandler.bind(null, 'click');
 	Ractive.events.doubleclick = eventHandler.bind(null, 'dblclick');
 
